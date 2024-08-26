@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <h1 class="presentacion__contenido__titulo">Encriptador de Texto</h1>
+            <input type="text" class="contanier__input" placeholder="Ingrese el texto aqui" id="inputText">
+            <!-- <img class="ojo" src="assets/ojo.png" alt="solo texto sin mayusculas ni acentos"> -->
+            <p class="advertencia"> solo letras minúsculas y sin acentos </p>
+            <div class="presentacion__botones">
+                <button class="boton" onclick="encriptarTexto();">Encriptar</button>
+                <button class="boton__2" onclick="desencriptarTexto();" disabled id="desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="presentacion__respuesta">
+            <div class="presentacion__inicio__salida" id="ocultar">
+                <img class="presentacion__imagen" src="assets/buscando.png" alt="No se ha ingresado texto">
+                <h2 class = "presentacion__texto__h2"> Ningún mensaje fue encontrado</h2>
+                <p class="presentacion__textos"> Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <p id="outputText" class="presentacion__texto__salida"></p>
+            <button class="boton__2" style="display: none;" id="copiarTexto" onclick="copiarTexto();">Copiar</button>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
